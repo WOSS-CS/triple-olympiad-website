@@ -253,7 +253,7 @@ export default function Home() {
               <img 
                 src="/team.png" 
                 alt="Team" 
-                className="opacity-50 mx-auto max-w-xl md:max-w-lg lg:max-w-xl"
+                className="opacity-50 mx-auto w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl"
                 draggable={false}
               />
               <p className="mt-6 text-white text-lg md:text-[30px] font-bold opacity-100 mt-[-25]">
