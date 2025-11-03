@@ -1,6 +1,7 @@
 import { MenuBar } from '@/components/MenuBar'
 import { TeamGrid } from '@/components/TeamGrid'
 import { FAQ } from '@/components/FAQ'
+import { Footer } from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -265,6 +266,9 @@ export default function Home() {
             
             {/* FAQ Section */}
             <FAQ />
+            
+            {/* Footer - Inside main container */}
+            <Footer />
             
             {/* Bottom spacing with glow */}
             <div className="mt-24 md:mt-32 relative">
