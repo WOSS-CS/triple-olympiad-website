@@ -1,4 +1,6 @@
 import { MenuBar } from '@/components/MenuBar'
+import { TeamGrid } from '@/components/TeamGrid'
+import { FAQ } from '@/components/FAQ'
 
 export default function Home() {
   return (
@@ -65,68 +67,40 @@ export default function Home() {
                   Proudly Sponsored By:
                 </h2>
                 <div className="relative overflow-hidden">
-                  {/* Static logos container */}
-                  <div className="flex justify-center items-center gap-6 md:gap-8 px-8 md:px-16">
-                    <img 
-                      src="/google.svg" 
-                      alt="Google" 
-                      className="h-8 md:h-10 w-auto opacity-60 hover:opacity-80 transition-opacity"
-                      draggable={false}
-                    />
-                    <img 
-                      src="/amazon.svg" 
-                      alt="Amazon" 
-                      className="h-8 md:h-12 w-auto opacity-60 hover:opacity-80 transition-opacity"
-                      draggable={false}
-                    />
-                    <img 
-                      src="/meta.svg" 
-                      alt="Meta" 
-                      className="h-8 md:h-7 w-auto opacity-60 hover:opacity-80 transition-opacity"
-                      draggable={false}
-                    />
-                    <img 
-                      src="/netflix.svg" 
-                      alt="Netflix" 
-                      className="h-8 md:h-8 w-auto opacity-60 hover:opacity-80 transition-opacity"
-                      draggable={false}
-                    />
-                    <img 
-                      src="/spotify.svg" 
-                      alt="Spotify" 
-                      className="h-8 md:h-11 w-auto opacity-60 hover:opacity-80 transition-opacity"
-                      draggable={false}
-                    />
-                    <img 
-                      src="/google.svg" 
-                      alt="Google" 
-                      className="h-8 md:h-10 w-auto opacity-60 hover:opacity-80 transition-opacity"
-                      draggable={false}
-                    />
-                    <img 
-                      src="/amazon.svg" 
-                      alt="Amazon" 
-                      className="h-8 md:h-12 w-auto opacity-60 hover:opacity-80 transition-opacity"
-                      draggable={false}
-                    />
-                    <img 
-                      src="/meta.svg" 
-                      alt="Meta" 
-                      className="h-8 md:h-7 w-auto opacity-60 hover:opacity-80 transition-opacity"
-                      draggable={false}
-                    />
-                    <img 
-                      src="/netflix.svg" 
-                      alt="Netflix" 
-                      className="h-8 md:h-8 w-auto opacity-60 hover:opacity-80 transition-opacity"
-                      draggable={false}
-                    />
-                    <img 
-                      src="/spotify.svg" 
-                      alt="Spotify" 
-                      className="h-8 md:h-11 w-auto opacity-60 hover:opacity-80 transition-opacity"
-                      draggable={false}
-                    />
+                  {/* Infinite scrolling container */}
+                  <div className="flex animate-infinite-scroll">
+                    {/* First set of logos */}
+                    <div className="flex items-center gap-12 md:gap-16 min-w-max px-6">
+                      <img src="/google.svg" alt="Google" className="h-8 md:h-10 w-auto opacity-60" draggable={false} />
+                      <img src="/amazon.svg" alt="Amazon" className="h-8 md:h-12 w-auto opacity-60" draggable={false} />
+                      <img src="/meta.svg" alt="Meta" className="h-8 md:h-7 w-auto opacity-60" draggable={false} />
+                      <img src="/netflix.svg" alt="Netflix" className="h-8 md:h-8 w-auto opacity-60" draggable={false} />
+                      <img src="/spotify.svg" alt="Spotify" className="h-8 md:h-11 w-auto opacity-60" draggable={false} />
+                    </div>
+                    {/* Second set */}
+                    <div className="flex items-center gap-12 md:gap-16 min-w-max px-6">
+                      <img src="/google.svg" alt="Google" className="h-8 md:h-10 w-auto opacity-60" draggable={false} />
+                      <img src="/amazon.svg" alt="Amazon" className="h-8 md:h-12 w-auto opacity-60" draggable={false} />
+                      <img src="/meta.svg" alt="Meta" className="h-8 md:h-7 w-auto opacity-60" draggable={false} />
+                      <img src="/netflix.svg" alt="Netflix" className="h-8 md:h-8 w-auto opacity-60" draggable={false} />
+                      <img src="/spotify.svg" alt="Spotify" className="h-8 md:h-11 w-auto opacity-60" draggable={false} />
+                    </div>
+                    {/* Third set */}
+                    <div className="flex items-center gap-12 md:gap-16 min-w-max px-6">
+                      <img src="/google.svg" alt="Google" className="h-8 md:h-10 w-auto opacity-60" draggable={false} />
+                      <img src="/amazon.svg" alt="Amazon" className="h-8 md:h-12 w-auto opacity-60" draggable={false} />
+                      <img src="/meta.svg" alt="Meta" className="h-8 md:h-7 w-auto opacity-60" draggable={false} />
+                      <img src="/netflix.svg" alt="Netflix" className="h-8 md:h-8 w-auto opacity-60" draggable={false} />
+                      <img src="/spotify.svg" alt="Spotify" className="h-8 md:h-11 w-auto opacity-60" draggable={false} />
+                    </div>
+                    {/* Fourth set */}
+                    <div className="flex items-center gap-12 md:gap-16 min-w-max px-6">
+                      <img src="/google.svg" alt="Google" className="h-8 md:h-10 w-auto opacity-60" draggable={false} />
+                      <img src="/amazon.svg" alt="Amazon" className="h-8 md:h-12 w-auto opacity-60" draggable={false} />
+                      <img src="/meta.svg" alt="Meta" className="h-8 md:h-7 w-auto opacity-60" draggable={false} />
+                      <img src="/netflix.svg" alt="Netflix" className="h-8 md:h-8 w-auto opacity-60" draggable={false} />
+                      <img src="/spotify.svg" alt="Spotify" className="h-8 md:h-11 w-auto opacity-60" draggable={false} />
+                    </div>
                   </div>
                   
                   {/* Fade gradients */}
@@ -273,6 +247,24 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            
+            {/* Team Section */}
+            <div className="mt-24 md:mt-32 text-center">
+              <img 
+                src="/team.png" 
+                alt="Team" 
+                className="opacity-50 mx-auto max-w-xl md:max-w-lg lg:max-w-xl"
+                draggable={false}
+              />
+              <p className="mt-6 text-white text-lg md:text-[30px] font-bold opacity-100 mt-[-25]">
+                Meet the crew behind this event
+              </p>
+              
+              <TeamGrid />
+            </div>
+            
+            {/* FAQ Section */}
+            <FAQ />
           </div>
         </div>
       </div>

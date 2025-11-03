@@ -69,12 +69,7 @@ export function MenuBar() {
           <a href="#" className="text-white opacity-50 hover:opacity-75 transition-all font-medium">
             About
           </a>
-          <a href="#" className="text-white opacity-50 hover:opacity-75 transition-all font-medium">
-            Services
-          </a>
-          <a href="#" className="text-white opacity-50 hover:opacity-75 transition-all font-medium">
-            Contact
-          </a>
+        
         </nav>
         
         {/* Right side - Login button on desktop, hamburger on mobile */}
