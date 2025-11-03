@@ -265,6 +265,16 @@ export default function Home() {
             
             {/* FAQ Section */}
             <FAQ />
+            
+            {/* Bottom spacing with glow */}
+            <div className="mt-24 md:mt-32 relative">
+              <img 
+                src="/bottom_glow.png" 
+                alt="Bottom Glow" 
+                className="absolute bottom-0 left-0 w-full h-auto opacity-60 pointer-events-none -z-10"
+                draggable={false}
+              />
+            </div>
           </div>
         </div>
       </div>

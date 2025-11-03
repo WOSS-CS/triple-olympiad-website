@@ -38,7 +38,7 @@ export function MenuBar() {
     <div 
       className={`fixed z-50 transition-all duration-500 ease-out animate-fade-in-down-delay-3 ${
         scrolled 
-          ? 'top-2 md:top-4 left-24 right-24 md:left-64 md:right-64 lg:left-80 lg:right-80 xl:left-96 xl:right-96' 
+          ? 'top-2 md:top-4 left-8 right-8 md:left-20 md:right-20 lg:left-32 lg:right-32 xl:left-48 xl:right-48' 
           : 'top-6 md:top-12 left-4 right-4 md:left-10 md:right-10'
       }`}
     >
