@@ -145,13 +145,13 @@ export function MenuBar() {
           </a>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <div className="w-6 h-5 flex flex-col justify-between">
-              <span className="w-full h-0.5 bg-white opacity-50"></span>
-              <span className="w-full h-0.5 bg-white opacity-50"></span>
-              <span className="w-full h-0.5 bg-white opacity-50"></span>
-            </div>
-          </div>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSekrMwHMV2sJHNmuIWCgMm3ndVJ_n0CRSNz753GqwgN2cAtvw/viewform?usp=dialog"
+            target="_blank"
+            className="md:hidden bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg font-medium transition-colors text-sm"
+          >
+            Apply Now
+          </a>
         </div>
       </MenuDiv>
     </MenuContainer>
