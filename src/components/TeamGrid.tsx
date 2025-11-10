@@ -6,7 +6,7 @@ const teamSections: {
   {
     title: "Computer Science Team",
     members: [
-      ["Moiz", "none", "#"],
+      ["Moiz", "moiz.png", "https://www.linkedin.com/in/moiz-ahmed-hashmi-a36670213/"],
       ["Arjun", "none", "#"],
       ["Eddie", "eddie.jpeg", "https://www.linkedin.com/in/eddiebian/"],
       ["Darren", "darren.jpeg", "https://www.linkedin.com/in/wenxuan-su/"],
