@@ -4,34 +4,34 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import styled from "styled-components";
 
-const MenuContainer = styled.div<{ scrolled: boolean }>`
+const MenuContainer = styled.div<{ scrolled: string }>`
   position: fixed;
   z-index: 50;
   transition: all 0.5s ease-out;
   animation: fade-in-down-delay-3 1s ease-out;
 
-  top: ${(props) => (props.scrolled ? "0.5rem" : "1.5rem")};
-  left: ${(props) => (props.scrolled ? "2rem" : "1rem")};
-  right: ${(props) => (props.scrolled ? "2rem" : "1rem")};
+  top: ${(props) => (props.scrolled === "true" ? "0.5rem" : "1.5rem")};
+  left: ${(props) => (props.scrolled === "true" ? "2rem" : "1rem")};
+  right: ${(props) => (props.scrolled === "true" ? "2rem" : "1rem")};
 
   @media (min-width: 768px) {
-    top: ${(props) => (props.scrolled ? "1rem" : "3rem")};
-    left: ${(props) => (props.scrolled ? "5rem" : "2.5rem")};
-    right: ${(props) => (props.scrolled ? "5rem" : "2.5rem")};
+    top: ${(props) => (props.scrolled === "true" ? "1rem" : "3rem")};
+    left: ${(props) => (props.scrolled === "true" ? "5rem" : "2.5rem")};
+    right: ${(props) => (props.scrolled === "true" ? "5rem" : "2.5rem")};
   }
 
   @media (min-width: 1024px) {
-    left: ${(props) => (props.scrolled ? "8rem" : "2.5rem")};
-    right: ${(props) => (props.scrolled ? "8rem" : "2.5rem")};
+    left: ${(props) => (props.scrolled === "true" ? "8rem" : "2.5rem")};
+    right: ${(props) => (props.scrolled === "true" ? "8rem" : "2.5rem")};
   }
 
   @media (min-width: 1280px) {
-    left: ${(props) => (props.scrolled ? "12rem" : "2.5rem")};
-    right: ${(props) => (props.scrolled ? "12rem" : "2.5rem")};
+    left: ${(props) => (props.scrolled === "true" ? "12rem" : "2.5rem")};
+    right: ${(props) => (props.scrolled === "true" ? "12rem" : "2.5rem")};
   }
 `;
 
-const MenuDiv = styled.div<{ scrolled: boolean }>`
+const MenuDiv = styled.div<{ scrolled: string }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,7 +40,7 @@ const MenuDiv = styled.div<{ scrolled: boolean }>`
   transition: all 0.5s ease-out;
 
   ${(props) =>
-    props.scrolled &&
+    props.scrolled === "true" &&
     `
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px) saturate(200%);
@@ -86,8 +86,8 @@ export function MenuBar() {
   }, []);
 
   return (
-    <MenuContainer scrolled={scrolled}>
-      <MenuDiv scrolled={scrolled}>
+    <MenuContainer scrolled={scrolled.toString()}>
+      <MenuDiv scrolled={scrolled.toString()}>
         {/* Logo */}
         <div className="flex items-center">
           <Image

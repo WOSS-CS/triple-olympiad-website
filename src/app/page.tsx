@@ -399,7 +399,7 @@ export default function Home() {
             </div>
 
             {/* Team Section */}
-            <div
+            {/* <div
               id="team"
               className="mt-24 md:mt-32 mb-24 md:mb-64 text-center"
             >
@@ -414,7 +414,7 @@ export default function Home() {
               </p>
 
               <TeamGrid />
-            </div>
+            </div> */}
 
             {/* Footer - Inside main container */}
             <Footer />
