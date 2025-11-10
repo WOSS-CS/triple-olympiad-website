@@ -2,6 +2,57 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import styled from "styled-components";
+
+const MenuContainer = styled.div<{ scrolled: boolean }>`
+  position: fixed;
+  z-index: 50;
+  transition: all 0.5s ease-out;
+  animation: fade-in-down-delay-3 1s ease-out;
+
+  top: ${(props) => (props.scrolled ? "0.5rem" : "1.5rem")};
+  left: ${(props) => (props.scrolled ? "2rem" : "1rem")};
+  right: ${(props) => (props.scrolled ? "2rem" : "1rem")};
+
+  @media (min-width: 768px) {
+    top: ${(props) => (props.scrolled ? "1rem" : "3rem")};
+    left: ${(props) => (props.scrolled ? "5rem" : "2.5rem")};
+    right: ${(props) => (props.scrolled ? "5rem" : "2.5rem")};
+  }
+
+  @media (min-width: 1024px) {
+    left: ${(props) => (props.scrolled ? "8rem" : "2.5rem")};
+    right: ${(props) => (props.scrolled ? "8rem" : "2.5rem")};
+  }
+
+  @media (min-width: 1280px) {
+    left: ${(props) => (props.scrolled ? "12rem" : "2.5rem")};
+    right: ${(props) => (props.scrolled ? "12rem" : "2.5rem")};
+  }
+`;
+
+const MenuDiv = styled.div<{ scrolled: boolean }>`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.5s ease-out;
+
+  ${(props) =>
+    props.scrolled &&
+    `
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  `}
+
+  @media (min-width: 768px) {
+    padding: 1rem 1.5rem;
+  }
+`;
 
 export function MenuBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,23 +86,8 @@ export function MenuBar() {
   }, []);
 
   return (
-    <div
-      className={`fixed z-50 transition-all duration-500 ease-out animate-fade-in-down-delay-3 ${
-        scrolled
-          ? "top-2 md:top-4 left-8 right-8 md:left-20 md:right-20 lg:left-32 lg:right-32 xl:left-48 xl:right-48"
-          : "top-6 md:top-12 left-4 right-4 md:left-10 md:right-10"
-      }`}
-    >
-      <div
-        className="flex items-center justify-between px-4 py-3 md:px-6 md:py-4 rounded-xl transition-all duration-500 ease-out"
-        style={{
-          backgroundColor: scrolled
-            ? "rgba(255, 255, 255, 0.1)"
-            : "rgba(255, 255, 255, 0)",
-          backdropFilter: scrolled ? "blur(16px) saturate(180%)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(16px) saturate(180%)" : "none",
-        }}
-      >
+    <MenuContainer scrolled={scrolled}>
+      <MenuDiv scrolled={scrolled}>
         {/* Logo */}
         <div className="flex items-center">
           <Image
@@ -100,9 +136,13 @@ export function MenuBar() {
         {/* Right side - Login button on desktop, hamburger on mobile */}
         <div className="flex items-center">
           {/* Login Button - Hidden on mobile */}
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSekrMwHMV2sJHNmuIWCgMm3ndVJ_n0CRSNz753GqwgN2cAtvw/viewform?usp=dialog" target="_blank" className="hidden md:block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSekrMwHMV2sJHNmuIWCgMm3ndVJ_n0CRSNz753GqwgN2cAtvw/viewform?usp=dialog"
+            target="_blank"
+            className="hidden md:block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+          >
             Register
-            </a>
+          </a>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -113,7 +153,7 @@ export function MenuBar() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </MenuDiv>
+    </MenuContainer>
   );
 }
