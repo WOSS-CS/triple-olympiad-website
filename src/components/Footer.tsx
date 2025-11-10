@@ -1,8 +1,8 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
-  
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="relative mt-16 md:mt-24">
       <div className="px-8 md:px-16 lg:px-24 py-0 md:py-[0]">
@@ -20,11 +20,15 @@ export function Footer() {
                 />
                 <div>
                   <h3 className="text-white font-bold text-lg">WOSS</h3>
-                  <p className="text-green-400 text-sm font-medium">Triple Olympiad</p>
+                  <p className="text-green-400 text-sm font-medium">
+                    Triple Olympiad
+                  </p>
                 </div>
               </div>
               <p className="text-white/70 text-sm leading-relaxed max-w-sm">
-                Empowering students through comprehensive STEM competitions across Mathematics, Science, and Computer Programming. Building tomorrow's innovators today.
+                Empowering students through comprehensive STEM competitions
+                across Mathematics, Science, and Computer Programming. Building
+                tomorrow's innovators today.
               </p>
             </div>
 
@@ -32,14 +36,35 @@ export function Footer() {
             <div className="space-y-4">
               <h4 className="text-white font-semibold text-lg">Quick Links</h4>
               <nav className="space-y-3">
-                <a href="#sponsors" className="block text-white/70 hover:text-green-400 transition-colors text-sm">
-                  Sponsors
+                <a
+                  href="#about"
+                  className="block text-white/70 hover:text-green-400 transition-colors text-sm"
+                >
+                  About
                 </a>
-                <a href="#team" className="block text-white/70 hover:text-green-400 transition-colors text-sm">
-                  Team
+                <a
+                  href="#schedule"
+                  className="block text-white/70 hover:text-green-400 transition-colors text-sm"
+                >
+                  Schedule
                 </a>
-                <a href="#faq" className="block text-white/70 hover:text-green-400 transition-colors text-sm">
+                <a
+                  href="#venue"
+                  className="block text-white/70 hover:text-green-400 transition-colors text-sm"
+                >
+                  Venue
+                </a>
+                <a
+                  href="#faq"
+                  className="block text-white/70 hover:text-green-400 transition-colors text-sm"
+                >
                   FAQ
+                </a>
+                <a
+                  href="#team"
+                  className="block text-white/70 hover:text-green-400 transition-colors text-sm"
+                >
+                  Team
                 </a>
               </nav>
             </div>
@@ -49,14 +74,19 @@ export function Footer() {
               <h4 className="text-white font-semibold text-lg">Contact</h4>
               <div className="space-y-3 text-sm">
                 <div className="text-white/70">
-                  <p>123 Innovation Drive</p>
-                  <p>Toronto, ON M5V 3A8</p>
+                  <p>1330 Montclair Dr</p>
+                  <p>Oakville, ON L6H 1Z5</p>
                 </div>
-                <div className="text-white/70">
+                {/* <div className="text-white/70">
                   <p>(416) 555-0123</p>
-                </div>
+                </div> */}
                 <div className="text-white/70">
-                  <p>info@wossolympiad.ca</p>
+                  <a
+                    href="mailto:wosstriolympiad@gmail.com"
+                    className="text-white/70 hover:text-green-400 transition-colors"
+                  >
+                    wosstriolympiad@gmail.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -69,10 +99,16 @@ export function Footer() {
                 © {currentYear} WOSS Triple Olympiad. All rights reserved.
               </p>
               <div className="flex space-x-6">
-                <a href="#" className="text-white/50 hover:text-green-400 transition-colors text-sm">
+                <a
+                  href="#"
+                  className="text-white/50 hover:text-green-400 transition-colors text-sm"
+                >
                   Privacy Policy
                 </a>
-                <a href="#" className="text-white/50 hover:text-green-400 transition-colors text-sm">
+                <a
+                  href="#"
+                  className="text-white/50 hover:text-green-400 transition-colors text-sm"
+                >
                   Terms of Service
                 </a>
               </div>
@@ -81,5 +117,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

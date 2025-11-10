@@ -54,9 +54,12 @@ export default function Home() {
                   className="w-auto h-auto max-w-sm md:max-w-2xl lg:max-w-4xl animate-fade-in-down-delay-2"
                   draggable={false}
                 />
-                <button className="bg-gradient-to-b from-green-400 to-green-700 text-black px-6 py-3 md:px-10 md:py-5 rounded-full font-medium text-base md:text-[20px] shadow-md hover:from-green-500 hover:to-green-800 transition-all duration-300 flex items-center gap-2 w-48 md:w-60 justify-center animate-fade-in-down-delay-3">
+                <a
+                  className="bg-gradient-to-b from-green-400 to-green-700 text-black px-6 py-3 md:px-10 md:py-5 rounded-full font-medium text-base md:text-[20px] shadow-md hover:from-green-500 hover:to-green-800 transition-all duration-300 flex items-center gap-2 w-48 md:w-60 justify-center animate-fade-in-down-delay-3"
+                  href="mailto:wosstriolympiad@gmail.com?subject=Sponsorship%20Opportunity%20for%20Triple%20Olympiad"
+                >
                   Sponsor Event
-                </button>
+                </a>
 
                 {/* Current Sponsors Section */}
                 <div className="mt-16 md:mt-24">
@@ -238,7 +241,10 @@ export default function Home() {
                 draggable={false}
               />
               {/* Feature Section 1 */}
-              <div className="mt-24 md:mt-32 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
+              <div
+                id="about"
+                className="mt-24 md:mt-32 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto"
+              >
                 {/* Left side - Icon, heading, subheading */}
                 <div className="space-y-6 text-left">
                   {/* Icon box */}
@@ -264,15 +270,19 @@ export default function Home() {
                   </h3>
 
                   {/* Subheading */}
-                    <p className="text-base md:text-lg text-white opacity-70 max-w-md text-left">
-                    From December 15-17, 2025, join WOSS' Triple Olympiad featuring competitions in mathematics, computer science, and physics. There are solo and team rounds, with with complimentary snacks and food between sessions. Prizes will be awarded to the top three teams in each category.
-                    </p>
+                  <p className="text-base md:text-lg text-white opacity-70 max-w-md text-left">
+                    From December 15-17, 2025, join WOSS' Triple Olympiad
+                    featuring competitions in mathematics, computer science, and
+                    physics. There are solo and team rounds, with with
+                    complimentary snacks and food between sessions. Prizes will
+                    be awarded to the top three teams in each category.
+                  </p>
                 </div>
 
                 {/* Right side - Large image area */}
                 <div className="bg-green-700 rounded-2xl p-3 md:p-4 aspect-4/3 flex items-center justify-center overflow-hidden">
                   <img
-                    src="https://placehold.co/800x600?text=Competition+Highlights"
+                    src="comphighlight.png"
                     alt="Competitors working through Olympiad challenges"
                     className="w-full h-full object-cover rounded-2xl"
                     draggable={false}
@@ -281,11 +291,14 @@ export default function Home() {
               </div>
 
               {/* Feature Section 2 - Swapped layout */}
-              <div className="mt-24 md:mt-32 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
+              <div
+                id="schedule"
+                className="mt-24 md:mt-32 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto"
+              >
                 {/* Left side - Large image area */}
                 <div className="bg-green-700 rounded-2xl p-3 md:p-4 aspect-4/3 flex items-center justify-center order-2 lg:order-1 overflow-hidden">
                   <img
-                    src="https://placehold.co/800x600?text=Event+Schedule"
+                    src="/randomcaf.png"
                     alt="Illustration of the Triple Olympiad daily schedule"
                     className="w-full h-full object-cover rounded-2xl"
                     draggable={false}
@@ -319,16 +332,19 @@ export default function Home() {
                   {/* Subheading */}
                   <div className="text-base md:text-lg text-white opacity-70 max-w-md text-left space-y-4">
                     <ul className="list-disc list-inside space-y-2">
-                      <li>
-                      Schedule TBD
-                      </li>
+                      <li>Day 1: Physics (December 15)</li>
+                      <li>Day 2: Math (December 16)</li>
+                      <li>Day 3: Computer Science (December 17)</li>
                     </ul>
                   </div>
                 </div>
               </div>
 
               {/* Feature Section 3 - Back to original layout */}
-              <div className="mt-24 md:mt-32 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
+              <div
+                id="venue"
+                className="mt-24 md:mt-32 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto"
+              >
                 {/* Left side - Icon, heading, subheading */}
                 <div className="space-y-6 text-left">
                   {/* Icon box */}
@@ -377,8 +393,16 @@ export default function Home() {
               </div>
             </div>
 
+            {/* FAQ Section */}
+            <div id="faq">
+              <FAQ />
+            </div>
+
             {/* Team Section */}
-            <div className="mt-24 md:mt-32 text-center">
+            <div
+              id="team"
+              className="mt-24 md:mt-32 mb-24 md:mb-64 text-center"
+            >
               <img
                 src="/team.png"
                 alt="Team"
@@ -391,9 +415,6 @@ export default function Home() {
 
               <TeamGrid />
             </div>
-
-            {/* FAQ Section */}
-            <FAQ />
 
             {/* Footer - Inside main container */}
             <Footer />
