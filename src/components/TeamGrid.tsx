@@ -7,24 +7,28 @@ const teamSections: {
     title: "Computer Science Team",
     members: [
       ["Moiz", "moiz.png", "https://www.linkedin.com/in/moiz-ahmed-hashmi-a36670213/"],
-      ["Arjun", "none", "#"],
+      ["Arjun", "pfp.png", "#"],
       ["Eddie", "eddie.jpeg", "https://www.linkedin.com/in/eddiebian/"],
       ["Darren", "darren.jpeg", "https://www.linkedin.com/in/wenxuan-su/"],
       ["Caden", "caden.PNG", "#"],
-      ["Adham", "none", "#"],
+      ["Adham", "pfp.png", "#"],
       ["Austin", "yeet.jpg", "https://www.linkedin.com/in/austin-xiong-35093731b/"],
     ],
   },
   {
     title: "Physics Team",
     members: [
-      ["Parth", "none", "#"],
+      ["Parth", "pfp.png", "#"],
+      ["John", "pfp.png", "#"],
+      ["Kenny", "pfp.png", "#"]
     ],
   },
   {
     title: "Math Team",
     members: [
-      ["Shawn", "none", "#"],
+      ["Shawn", "pfp.png", "#"],
+      ["Ervin", "pfp.png", "#"],
+      ["Sophie", "pfp.png", "#"]
     ],
   },
 ];
