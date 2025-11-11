@@ -10,7 +10,7 @@ const teamSections: {
       ["Arjun", "none", "#"],
       ["Eddie", "eddie.jpeg", "https://www.linkedin.com/in/eddiebian/"],
       ["Darren", "darren.jpeg", "https://www.linkedin.com/in/wenxuan-su/"],
-      ["Caden", "caden.png", "#"],
+      ["Caden", "caden.PNG", "#"],
       ["Adham", "none", "#"],
       ["Austin", "yeet.jpg", "https://www.linkedin.com/in/austin-xiong-35093731b/"],
     ],
